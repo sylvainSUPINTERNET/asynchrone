@@ -24,7 +24,7 @@ MongoClient.connect(url, function(err, client) {
   }
 
   async function addUser(){
-        let insertResponse = await db.collection("users").insertOne(user)
+        let insertResponse = await db.collection("users").insertOne(user) // la function passé après le await keyword doit ETRE une promise <pending>
         return insertResponse;
   }
 
